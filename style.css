@@ -1,3 +1,4 @@
+/* Preset */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 :root {
     --primary-color: #007BFF;
@@ -20,13 +21,37 @@ body {
 a {
     text-decoration: none;
 }
-.diagram {
-    margin: 50px 0;
-}
+
+/* Container Class */
 .container {
     width: 100%;
     padding: 0 1rem;
     margin: 0 auto;
+}
+@media (min-width: 576px) {
+    .container {
+        width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+/* Diagram Section */
+.diagram {
+    margin: 50px 0;
 }
 .row {
     border: 1px solid gray;
@@ -113,6 +138,8 @@ a {
     left: 50%;
     transform: translate(-50%, -50%) rotate(-90deg);
 }
+
+/* Rotate Button CSS */
 .btn.btn-rotate {
     width: 100px;
     background-color: transparent;
@@ -146,7 +173,8 @@ a {
     transform: translateX(-50%);
     z-index: -1;
 }
-/* Different Design for First Row */
+
+/* Design for First Row */
 .first-row .title-container {
     background-color: var(--primary-color-light);
 }
@@ -158,14 +186,17 @@ a {
     color: var(--black-color);
     border-radius: var(--rounded-corner);
 }
-/* Different Design for Fourth Row */
+
+/* Design for Fourth Row */
 .fourth-row .inner-row {
     gap: 320px;
 }
-/* Different Design for Fifth Row */
+
+/* Design for Fifth Row */
 .fifth-row .inner-row {
     justify-content: flex-end;
 }
+
 /* Responsive CSS */
 @media screen and (max-width: 1199px) {
     .inner-row {
@@ -230,6 +261,7 @@ a {
         margin-left: 0;
         margin-bottom: 15px;
     }
+    
     /* New Lines and Arrows for mobile */
     .third-row .for-mobile.fa-chevron-up {
         color: var(--black-color);
@@ -303,30 +335,10 @@ a {
         transform: translateY(-50%);
     }
 }
+
+/* Hide Icon and Lines in Larger Devices */
 @media screen and (min-width: 768px) {
-    .for-mobile.fa-chevron-up, .line1-for-mobile, .third-row .btn.btn-rotate .line3-for-mobile, .third-row .btn.btn-rotate .for-mobile.fa-chevron-left, .third-row .btn.btn-rotate .line4-for-mobile, .line-text-for-mobile {
+    .for-mobile.fa-chevron-up, .line1-for-mobile, .third-row .btn.btn-rotate .line3-for-mobile, .third-row .btn.btn-rotate .for-mobile.fa-chevron-left, .third-row .btn.btn-rotate .line4-for-mobile, .line-text-for-mobile, .fifth-row .for-mobile.fa-chevron-left {
         display: none;
-    }
-}
-
-
-@media (min-width: 576px) {
-    .container {
-        width: 540px;
-    }
-}
-@media (min-width: 768px) {
-    .container {
-        width: 720px;
-    }
-}
-@media (min-width: 992px) {
-    .container {
-        width: 960px;
-    }
-}
-@media (min-width: 1200px) {
-    .container {
-        width: 1140px;
     }
 }
