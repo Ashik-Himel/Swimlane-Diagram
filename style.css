@@ -64,7 +64,7 @@ a {
     max-width: 150px;
     text-align: center;
 }
-.fa-chevron-left {
+.third-row .fa-chevron-left {
     color: var(--black-color);
     position: absolute;
     top: 50%;
@@ -72,7 +72,7 @@ a {
     left: 100%;
     font-size: 2rem;
 }
-.fa-chevron-down {
+.fifth-row .fa-chevron-down {
     color: var(--black-color);
     position: absolute;
     bottom: calc(100% - 0.5rem);
@@ -196,6 +196,9 @@ a {
     }
 }
 @media screen and (max-width: 767px) {
+    .diagram {
+        margin: 15px 0;
+    }
     .row {
         flex-direction: column;
         height: initial;
@@ -217,7 +220,91 @@ a {
         gap: 20px;
         padding: 20px;
     }
-    .line1, .line2, .line-text, .fa-chevron-left, .fa-chevron-down {
+    .line1, .line2, .line-text, .third-row .fa-chevron-left, .fifth-row .fa-chevron-down {
+        display: none;
+    }
+    .third-row .inner-row .btn {
+        width: 150px;
+    }
+    .btn.btn-rotate {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+    /* New Lines and Arrows for mobile */
+    .third-row .for-mobile.fa-chevron-up {
+        color: var(--black-color);
+        font-size: 2rem;
+        position: absolute;
+        top: calc(100% - 6px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .third-row .line1-for-mobile {
+        display: block;
+        width: 5px;
+        height: 100px;
+        background-color: var(--black-color);
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -4;
+    }
+    .third-row .btn.btn-rotate .for-mobile.fa-chevron-left {
+        display: block;
+        left: calc(100% - 0.5rem);
+    }
+    .third-row .btn.btn-rotate .line3-for-mobile {
+        display: block;
+        width: 50px;
+        height: 5px;
+        background-color: var(--black-color);
+        position: absolute;
+        left: calc(100% - 0.5rem);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .third-row .btn.btn-rotate .line4-for-mobile {
+        display: block;
+        width: 5px;
+        height: 508px;
+        background-color: var(--black-color);
+        position: absolute;
+        left: calc(100% + 37px);
+        top: 50%;
+        z-index: 5;
+    }
+    .line-text-for-mobile {
+        display: block;
+        background-color: var(--white-color);
+        color: var(--black-color);
+        padding: 0 0.5rem;
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 50%;
+        left: -20px;
+    }
+    .fifth-row .for-mobile.fa-chevron-left {
+        color: var(--black-color);
+        font-size: 2rem;
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .fifth-row .line2-for-mobile {
+        display: block;
+        width: 42px;
+        height: 5px;
+        background-color: var(--black-color);
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+@media screen and (min-width: 768px) {
+    .for-mobile.fa-chevron-up, .line1-for-mobile, .third-row .btn.btn-rotate .line3-for-mobile, .third-row .btn.btn-rotate .for-mobile.fa-chevron-left, .third-row .btn.btn-rotate .line4-for-mobile, .line-text-for-mobile {
         display: none;
     }
 }
